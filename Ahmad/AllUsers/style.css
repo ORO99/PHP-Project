@@ -1,0 +1,117 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3b3b3b;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  /* background-color: #e2cdb0; */
+  background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
+}
+
+/*--------------------------*/
+/*-------------------navbar--------*/
+
+.navbar-brand img{
+  width: 70px;
+}
+.admin_img{
+width: 70px;
+border-radius: 50%;
+}
+.admin_name{
+align-self: center;
+margin-left: 1rem;
+}
+/*-------------------navbar--------*/
+
+/*------------------------------*/
+
+input[type=button]{
+background-color: #4d351d;
+border: none;
+color: #fff;
+padding: 10px 20px;
+border-radius: 10px;
+}
+.table_container{
+  margin: 5% auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+
+}
+.table_container h3{
+    color: 	#4d351d;
+    font-size: 20px;
+    font-weight: 800;
+}
+.imag{
+    background-image: url('./img/allusers.png');
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+/*----------------table from database--------------------*/
+
+#tble{
+  padding: 5px;
+  background-color: #fff;
+  text-align: center;
+  width: 550px;
+
+}
+.thead{
+    background-color: #4d351d;
+    background-color: #4d351d;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.table_header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.table_img{
+  width: 50px;
+}
+button{
+  background-color: #4d351d;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+}
+button a{
+  text-decoration: none;
+  color: #fff;
+}
+.td_second{
+  line-height: 3.5;
+}
+.td_first{
+  line-height: 3.5;
+}
+.add{
+  text-decoration: none;
+  color: #4d351d;
+  border-bottom: 1px solid #4d351d;
+  font-weight: bolder;
+  font-size: 15px;
+}
+button:hover a{
+  color: #4d351d;
+}
+button:hover {
+  background-color: #fff;
+  color: #4d351d;
+  border: 1px solid #4d351d;
+}

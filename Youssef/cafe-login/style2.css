@@ -1,0 +1,42 @@
+.back_color{
+    /* background-color: #ccb697; */
+    background-image: url("66.jpg");
+}
+i{
+    color:#4d351d ;
+}
+
+/* .bt-coffee{
+    background-color: #4d351d ;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 5px;
+    margin: 3rem 6rem;
+} */
+
+.btn-coffee{
+    background-color: #4d351d;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 5px;
+    margin: 3rem 10rem;
+}
+
+.bt-text{
+    color:#4d351d ;
+}
+.cafe{
+    background-color: white;
+}
+.round-border{
+    border-radius: 10px;
+}
+
+.footer{
+    width: 100vw;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0%;
+    margin-bottom: 0rem;
+}
+

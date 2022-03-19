@@ -1,0 +1,60 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #3b3b3b;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    /* background-color: #e2cdb0; */
+    background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
+  }
+  /*-------------------navbar--------*/
+  .navbar-brand img{
+      width: 70px;
+  }
+  .admin_img{
+    width: 70px;
+    border-radius: 50%;
+  }
+  .admin_name{
+    align-self: center;
+    margin-left: 1rem;
+  }
+  /*----------------------------------------*/
+
+  .container_f{
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      margin: 5% auto;
+
+  }
+  .image{
+      background-image: url("./img/pngegg3.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 450px;
+  }
+  .back{
+      text-decoration: none;
+      color: #4d351d;
+      font-size: 2em;
+      border-bottom: 1px solid #4d351d;
+  }
+  .save{
+      background-color: #4d351d;
+      border: none;
+      color: #fff;
+      padding: 1em 2em;
+  }
+  label{
+      color: #4d351d;
+      font-size: 1em;
+      font-weight: bolder;
+  }
+  .my_info{
+      border-bottom: 3px solid #4d351d;
+  }

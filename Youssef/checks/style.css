@@ -1,0 +1,111 @@
+body {
+    /* background-color: #e2cdb0; */
+    background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
+
+}
+/*---------------------navbar-----------------------*/
+.navbar-brand img{
+    width: 70px;
+  }
+  .admin_img{
+  width: 70px;
+  border-radius: 50%;
+  }
+  .admin_name{
+  align-self: center;
+  margin-left: 1rem;
+  }
+  /*------------------------*/
+  .the_container{
+    margin: 5% auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imag{
+    background-image: url('./img/edit_img.png');
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}
+.accordion-button {
+    background: #e7f1ff;
+}
+
+.accordion-body {
+    background: #fff;
+}
+.accordion-button::before {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    content: "+";
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+    font-size: 25px;
+    line-height: 0.5;
+    background-color: #4d351d;
+    color: #fff;
+    margin-right: 0.2em;
+}
+.accordion-button:not(.collapsed)::before {
+    content: "-";
+    background-image: none;
+    font-size: 50px;
+    line-height: 0.2;
+background-color: #4d351d;
+color: #fff;
+margin-right: 0.1em;
+
+}
+.accordion-button::after {
+    background-image: none;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: none;
+
+}
+.main_tr{
+background-color: #fff;
+}
+.table{
+width: 100%;
+margin: 5% auto;
+}
+/* .accordion-header{
+width: 370px;
+} */
+.accord_class{
+width: 70%;
+}
+.tex_center{
+line-height: 3;
+}
+.order_table {
+width: 80%;
+}
+.table>:not(caption)>*>* {
+padding: 0;
+}
+.accordion-button {
+background: #ffe0c0;
+}
+.accordion-button:focus {
+z-index: 3;
+border-color: #ffe0c0;
+}
+.accordion-button:not(.collapsed) {
+color: #000;
+background-color: #ffe0c0;
+}
+.order_box{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.order_box img{
+    width: 100px;
+}
