@@ -1,6 +1,3 @@
-
-
-
 // var arr = document.getElementsByClassName("all");
 // for(i = 0; i < 7; i++){
 //     arr[i].addEventListener("click",(e)=>{
@@ -71,7 +68,7 @@ completeOrder.addEventListener("click", function(){
 //      e.stopPropagation();
 //     console.dir(e);
 // });
-    
+
 
 // }
 

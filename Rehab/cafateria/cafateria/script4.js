@@ -1,3 +1,5 @@
+console.log("hellllllllllllllllo");
+
 let arr = [];
 let arr2 = [];
 let priceArr = [];
@@ -8,11 +10,6 @@ var productPriceArr = [];
 var allproduct = document.getElementsByClassName("allproduct");
 var totalAmountSpan = document.getElementById("totalAmount");
 var productCountList = document.getElementsByClassName("productCount");
-var searchInput = document.getElementById("search");
-searchInput.addEventListener("change", function(e) {
-    document.cookie = "seachVal=" + searchInput.value;
-
-});
 var sum = 0;
 for (let i = 0; i < allproduct.length; i++) {
     allproduct[i].addEventListener("click", (e) => {

@@ -51,7 +51,7 @@ function Selectcategory()
   function selectAllUsers()
   {
     $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query="SELECT  `name` FROM `users`";
+    $sql_query="SELECT  `name`,`id` FROM `users`";
     $query_res= mysqli_query($con,$sql_query);
     return $query_res;
   }
