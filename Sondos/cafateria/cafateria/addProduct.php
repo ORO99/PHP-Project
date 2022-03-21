@@ -37,7 +37,7 @@ insertnewproduct($product_name,$product_price,$product_category,$product_image);
     </label>
 
     <ul>
-      <li><a href="..\..\..\Rehab\cafateria\cafateria\UserOrderAdmin.php">Home </a></li>
+      <li><a href="">Home </a></li>
       <li><a href="">Products </a></li>
       <li><a href="">Users</a></li>
       <li><a href="">Manual Orders</a></li>
@@ -59,7 +59,7 @@ insertnewproduct($product_name,$product_price,$product_category,$product_image);
           </div><!-- first -->
           <div class="input_group">
             <label>Price</label>
-            <input type="number" name="price" id="Price">
+            <input type="number" name="price" min="1" id="Price">
           </div><!-- second -->
 
           <div class="input_group">

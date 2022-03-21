@@ -24,7 +24,7 @@ function Selectcategory()
   }
   function selectallproduct(){
     $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query2= "SELECT `ProductID`, `ProductName`, `ProductPrice`, `ProductPicture` FROM `products`";
+    $sql_query2= "SELECT  `ProductName`, `ProductPrice`, `ProductPicture` FROM `products`";
     $sql_query=mysqli_query($con,$sql_query2);
     return $sql_query;
   }
@@ -45,7 +45,7 @@ function Selectcategory()
   function InsertUserOrder($orderName,$Quantity,$Notes,$room,$userId,$productTotalprice)
   {
     $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query2="INSERT INTO `orders`(`orderName`, `quantity`, `notes`, `room`, `userID`, `productTotalPrice`) VALUES ('$orderName','$Quantity','$Notes','$room','$userId','$productTotalprice')";
+    $sql_query2="INSERT INTO `orders`(`orderName`, `quantity`, `notes`, `room`, `date`, `userID`, `productTotalPrice`) VALUES ('$orderName','$Quantity','$Notes','$room','getdate()','$userId','$productTotalprice')";
     $sql_query=mysqli_query($con,$sql_query2);
   }
   function selectAllUsers()
@@ -55,33 +55,11 @@ function Selectcategory()
     $query_res= mysqli_query($con,$sql_query);
     return $query_res;
   }
-  function selectProductIdByName($name)
+  function SearchForProduct($name)
   {
     $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query="SELECT  `ProductID` FROM `products` WHERE `ProductName` ='$name'";
+    $sql_query="SELECT `ProductPicture` FROM `products` WHERE `ProductName` like '%$name%'";
     $query_res= mysqli_query($con,$sql_query);
     return $query_res;
   }
-  function getLastOrderId()
-  {
-    $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query="SELECT MAX(orderID) FROM `orders` ";
-    $query_res= mysqli_query($con,$sql_query);
-    return $query_res;
-  }
-  function insertIntoProductOrder($productId,$orderId,$quantity)
-  {
-    $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-    $sql_query="INSERT INTO `productorder`(`product_Id`, `order_Id`, `quantity`) VALUES ('$productId','$orderId','$quantity')";
-    $query_res= mysqli_query($con,$sql_query);
-    return $query_res;
-  }
-  // function getLatestOrder($uid)
-  // {
-  //   $con=mysqli_connect(db_host,db_user,db_pass,db_name);
-  //   $sql_query="SELECT  FROM `orders` WHERE ";
-  //   $query_res= mysqli_query($con,$sql_query);
-  //   return $query_res;
-  // }
-
 ?>
