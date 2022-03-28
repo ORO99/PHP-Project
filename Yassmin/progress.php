@@ -1,10 +1,11 @@
 <?php
 
-$mysqli = new mysqli("localhost","root","","cafeteria","3306") or die(mysqli_error($mysqli));
 
+$mysqli = new mysqli("localhost","root","","cafeteria","3306") or die(mysqli_error($mysqli));
+$recentID = $_GET['recentid'];
 if (isset($_GET["delete"])){
     $id = $_GET['delete'];
-    $mysqli->query("delete from orders where orderID=$id") or die($mysqli->error());
-    header("location: myorders.php");
+    $mysqli->query("delete from orders where orderID=$id") or die($mysqli->error);
+    header("location: myorders.php?id=$recentID");
 }
 ?>

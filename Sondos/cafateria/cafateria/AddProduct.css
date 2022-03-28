@@ -6,7 +6,7 @@ body
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration:none;
     list-style:none;
-    background-color: #E7CCAF;
+    background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
 }
 nav
 {

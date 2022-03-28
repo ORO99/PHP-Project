@@ -35,9 +35,9 @@
                 <input type="hidden" value="<?php echo $currentID; ?>" name="id">
                 <h1 class="mt-4 bt-text text-center ">Cafeteria</h1>
                 <label for="" class="fs-5 shad bt-text mt-4"  >Username</label>
-                <input type="text" class="form-control cb" name="name" >
-                <label for="" class="fs-5 shad mt-3 bt-text" >Password</label>
-                <input type="password" class="form-control cb" name="password">
+                <input type="text" class="form-control cb" name="name" value="enter a name... " >
+                <label for="" class="fs-5 shad mt-3 bt-text"  >Password</label>
+                <input type="password" class="form-control cb" name="password" value="enter a password...">
                 <!-- <button class=" shad btn-coffee">Login</button> -->
                 <input class="btn-coffee shad text-white" type="submit"></input>
                 <!-- <p class="bro">kelany</p> -->
@@ -72,10 +72,13 @@ if ($conn->connect_error) {
 // echo "Connected successfully";
 
 
+// if(isset($_POST)){
 
 $name = $_POST["name"];
 $pass = $_POST["password"];
 
+// print_r($_POST);
+// }
 $sql = "SELECT  id, name, password, is_admin FROM users where name = '$name' and password = '$pass' ";
 $result = $conn->query($sql);
 // print_r($result->fetch_assoc());

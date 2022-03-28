@@ -1,3 +1,7 @@
+  <?php
+    $userID = $_GET['id']; 
+    
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,11 +23,15 @@
         height:300px;
         border-radius: 10%;
       }
+
+      #submitbtn{
+
+      }
     </style>
 </head>
 
-<body>
-<nav>
+<body style="background-image: linear-gradient(to right, #e2cdb0,#7b5520 );">
+<nav style="background-color: transparent">
     <input type="checkbox" id="check">
     <label for="check">
       <i class="fa fa-align-justify" id="btn1"></i>
@@ -31,7 +39,7 @@
     </label>
 
     <ul>
-      <li><a href="..\Sondos\cafateria\cafateria\UserOrder.php?id=<?php echo $_GET['id']; ?>">Home </a></li>
+      <li><a href="..\Sondos\cafateria\cafateria\UserOrder.php?id=<?php echo $userID; ?>">Home </a></li>
       <li><a href="">Products </a></li>
     </ul>
     <div class="nav_img"> <img src="pp.png" alt="">
@@ -49,7 +57,7 @@
                 <input class="text" type="date" name="start" id="start">
                 <label class="text">End date</label>
                 <input class="text" type="date" name="end" id="end">
-                <input class ="filterBtn btn btn-primary"  type="submit" value="submit" name="submit" class="submit">
+                <input class ="filterBtn btn btn-primary"  type="submit" value="submit" name="submit" class="btn" style="background-color:#4d351d; border:#4d351d" id="submitbtn">
             </p>
     </form>
     <div id="accordion">
@@ -67,7 +75,7 @@
     </div> 
     
 <table id="myTable" style="background-color:white;" class="table table-striped table-hover">
-  <thead>
+  <thead style="background-color: #4d351d; color:white">
     <tr>
       <th scope="col">OrderDate</th>
       <th scope="col">Amount</th>
@@ -83,16 +91,16 @@
                  {while($row = $result->fetch_assoc()): ?>
                  <tr>
                       <?php $current_id = $row['orderID'];?>
-                     <td><?php echo $row['date']; ?><button id="<?php echo "plusbtn$current_id"; ?>" style="margin-left: 40%;" class="btn btn-success">+</button></td>
+                     <td><?php echo $row['date']; ?><button id="<?php echo "plusbtn$current_id"; ?>" style="margin-left: 40%; background-color:#4d351d; color:white" class="btn">+</button></td>
                      <td><?php echo $row['status_Id']; ?></td>
                      <td><?php echo $row['order_action']; ?></td>
                      <?php if ($row['status_Id']=="1"): ?> 	
                      <td>
                         <?php 
-                          $link = "progress.php?delete=$current_id";
+                          $link = "progress.php?delete=$current_id&recentid=$userID";
                           //$queryLink = "getorderdata.php?clicked=";
                         ?>
-                        <button class="btn btn-danger">Cancel Order</button> 
+                        <button class="btn" style="background-color: #4d351d; color:white">Cancel Order</button> 
                      </td> 
                      <?php else: ?>
                      <td>
@@ -139,33 +147,34 @@
 </table>
 
 <?php
-       $result = $mysqli->query("SELECT sum(ProductPrice) AS total FROM products") or die($mysqli->error); 
-       while($row = $result->fetch_assoc()): ?>
-<div style=" height:100px;background-color:white; color:brown;font-size:55px;text-align:center;" class=" mb-5">Total : <?php echo $row['total']; ?></div>   
-
-</div><?php endwhile; ?> 
-
+        if(isset($_POST['submit'])) {
+          $start_date = date('Y-m-d', strtotime($_POST['start']));
+          $end_date = date('Y-m-d', strtotime($_POST['end']));
+          $result = $mysqli->query("SELECT sum(productTotalPrice) AS total FROM orders WHERE date BETWEEN '".$start_date. "' and '".$end_date."'") or die($mysqli->error); 
+          while($row = $result->fetch_assoc()): ?>
+            <div id="totalDiv" style="height:100px;background-color:white; color:brown;font-size:55px;text-align:center;" class=" mb-5">Total : <?php echo $row['total']; ?></div>   
+            </div><?php endwhile; }?> 
 <script>
   let jslink = '<?=$link?>'; 
   let table = document.getElementsByTagName("table")[0];
+  let totalDiv = document.getElementById('totalDiv');
+  let submitBtn = document.getElementById('submitbtn');
+  submitBtn.addEventListener('click', function(){
+    totalDiv.style.display = "block";
+  });
   //display order details on + button click
   table.addEventListener('click',function(e){
     let divId = `hidden${e.target.id.split('n')[1]}`;
     if(e.target.innerText == '+')
     {
-      console.log('inside');
       e.target.innerText = '-';
       document.querySelector(`#${divId}`).style.display = "flex";
-      e.target.classList.add("btn-danger");
     }
     //hide order data on - click
     else if(e.target.innerText == '-')
     {
       e.target.innerText = '+';
       document.querySelector(`#${divId}`).style.display = "none";
-      e.target.classList.remove("btn-danger");
-      e.target.classList.add("btn-success");
-      
     }
     //alert for cancel order button
     else if(e.target.innerText == 'Cancel Order'){

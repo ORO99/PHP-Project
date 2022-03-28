@@ -73,7 +73,7 @@ $mydb = new DataBase('mysql:dbname=cafeteria;host=127.0.0.1;port=3306;', 'root',
 try {
     $mydb ->connect();
     $mydb->insert_into_users($_REQUEST['name'], $_REQUEST['password'], $_REQUEST['email'], $_REQUEST['room'], $the_picture);
-    header("Location: table.php");
+    header("Location: form.php");
 } catch (PDOException $e) {
     echo 'Connection failed: ' . $e->getMessage();
 }

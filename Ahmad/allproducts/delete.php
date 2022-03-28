@@ -1,14 +1,15 @@
+
 <?php
   
   
  if(!empty($_GET["index"])){
     $dsn = 'mysql:dbname=cafeteria;host=127.0.0.1;port=3306;';
-    $user = 'kelany';
-    $password = 'root';
+    $user = 'root';
+    $password = '';
   
     try {
         $db = new PDO($dsn, $user, $password);
-        $query="DELETE FROM products WHERE (id = :product_Id)";
+        $query="DELETE FROM products WHERE (ProductID = :product_Id)";
         $stmt=$db->prepare($query);
         
         $stmt->execute(["product_Id"=>$_GET["index"]]);
@@ -23,3 +24,19 @@
      header("location: home.php");
      exit;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

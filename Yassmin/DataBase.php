@@ -18,7 +18,7 @@ class DataBase
     }
 
     public function insert_into_users(...$args){
-        $query = "INSERT INTO `users` (`name`, `password`, `email`, `room`, `path`) VALUES(?,?,?,?,?)";
+        $query = "INSERT INTO `users` (`name`, `password`, `email`, `room`, `photo`) VALUES(?,?,?,?,?)";
         $stmt = $this->db->prepare($query);
         $stmt->execute($args);
     }
@@ -43,7 +43,7 @@ class DataBase
                 echo $obj->$something;
                 echo '</td>';
             }
-            echo "<td><img src='Images/$obj->path' style='width:50px;height:50px'></td>";
+            echo "<td><img src='Images/$obj->photo' style='width:50px;height:50px'></td>";
             echo "<td><a href='Edit.php?id=".$obj->id."'>Edit</a></td>";
             echo "<td><a href='Delete.php?id=".$obj->id."'>Delete</a></td>";
             echo'</tr>';

@@ -48,8 +48,8 @@
     if(!empty($_GET["index"])){
         $stdId=$_GET["index"];
         $dsn = 'mysql:dbname=cafeteria;host=127.0.0.1;port=3306;';
-        $user = 'kelany';
-        $password = 'root';
+        $user = 'root';
+        $password = '';
         try {
             $db = new PDO($dsn, $user, $password);
             $query="SELECT * FROM users WHERE id= :userr_Id";
@@ -93,8 +93,8 @@
     if(isset($_POST['save'])){
         $stdId=$_GET["index"];
         $dsn = 'mysql:dbname=cafeteria;host=127.0.0.1;port=3306;';
-        $user = 'kelany';
-        $password = 'root';
+        $user = 'root';
+        $password = '';
         try {
             $db = new PDO($dsn, $user, $password);
             $updateQuery="UPDATE users SET name = :name, email = :email  WHERE id= :userr_Id";

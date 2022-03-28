@@ -98,8 +98,9 @@
     </label>
 
     <ul>
-      <li><a href="">Home </a></li>
-      <li><a href="">My Orders </a></li>
+      <li><a href="..\..\..\Youssef\cafe-login\home.php">Home </a></li>
+      <li><a href="..\..\..\Youssef\checks\new.php">Checks </a></li>
+      <li><a href="..\..\..\Ahmad\allproducts\home.php">Products</a></li>
     </ul>
     <div class="nav_img"> <img src="./images/<?=$Userphoto?>" alt="">
       <h3>

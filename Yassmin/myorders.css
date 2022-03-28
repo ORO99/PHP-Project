@@ -4,7 +4,7 @@ body
     margin:0;
     padding:0;
     box-sizing:content-box;
-    background-color:#ffffff;
+    background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration:none;
     list-style:none;
@@ -12,7 +12,7 @@ body
 nav
 {
     height:70px;
-    background-color:#4e341c;
+    background-color: transparent;
 }
 nav ul{
     list-style: none;

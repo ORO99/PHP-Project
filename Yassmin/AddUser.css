@@ -4,12 +4,12 @@ body
     margin:0;
     padding:0;
     box-sizing:content-box;
-    background-color:#ffffff;
+    background-image: linear-gradient(to right, #e2cdb0,#7b5520 );
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration:none;
     list-style:none;
 }
-nav
+/* nav
 {
     height:70px;
     background-color:#4e341c;
@@ -55,8 +55,8 @@ nav ul li a:hover:before{
     transform: scaleX(1);
     transform-origin:left;
 
-}
-nav img
+} */
+/* nav img
 {
   width:60px;
   position:absolute;
@@ -64,7 +64,7 @@ nav img
   right:12%;
   height:60px ;
   border-radius:50% ;
-}
+} */
 .nav_img h3
 {
   float:right;
@@ -214,12 +214,12 @@ label
 
   input[type=text], input[type=password] , input[type=email], input[type=number] ,input[type=file]{
     width: 75%;
-    padding: 1%;
+    /* padding: 1%;
     margin: 2%;
     display: inline-block;
     border: solid 1px #4d351d;
     border-radius: 10px;
-    background: #ffffff;
+    background: #ffffff; */
   }
   
   input[type=submit]{

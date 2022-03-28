@@ -3,8 +3,8 @@
   
  if(!empty($_GET["index"])){
     $dsn = 'mysql:dbname=cafeteria;host=127.0.0.1;port=3306;';
-    $user = 'kel';
-    $password = 'root';
+    $user = 'root';
+    $password = '';
   
     try {
         $db = new PDO($dsn, $user, $password);
