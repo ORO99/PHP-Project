@@ -8,11 +8,6 @@ var productPriceArr = [];
 var allproduct = document.getElementsByClassName("allproduct");
 var totalAmountSpan = document.getElementById("totalAmount");
 var productCountList = document.getElementsByClassName("productCount");
-var searchInput = document.getElementById("search");
-searchInput.addEventListener("change", function(e) {
-    document.cookie = "seachVal=" + searchInput.value;
-
-});
 var sum = 0;
 for (let i = 0; i < allproduct.length; i++) {
     allproduct[i].addEventListener("click", (e) => {
@@ -62,7 +57,6 @@ for (let i = 0; i < allproduct.length; i++) {
     })
 }
 var ordercontent = document.getElementById("productContainer");
-
 
 function createOrderDiv(name, price) {
     var orderRow = document.createElement("div");
@@ -148,6 +142,9 @@ function updatePriceSpan() {
     console.log("length=> " + productCountList.length);
     for (let p = 0; p < productCountList.length; p++) {
         productCountList[p].addEventListener("change", function(e) {
+            console.log("changed");
+            console.log("1-" + parseInt(productCountList[p].value));
+            console.log("2-" + parseInt(priceOnly[p]));
             productPriceArr[p].innerText = parseInt(priceOnly[p]) * parseInt(productCountList[p].value);
             priceArr[p] = parseInt(priceOnly[p]) * parseInt(productCountList[p].value);
             sum = 0;
@@ -161,3 +158,7 @@ function updatePriceSpan() {
 
 
 }
+var search=document.getElementById("btnSearch");
+search.addEventListener("click",function(){
+   document.cookie="searchproduct=1";
+        })

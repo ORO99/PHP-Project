@@ -2,16 +2,20 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: content-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
     list-style: none;
-    background-color: #E7CCAF;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #3b3b3b;
+    -webkit-font-smoothing: antialiased;
+    /* background-color: #E7CCAF; */
+    background-image: linear-gradient(to right, #e2cdb0, #7b5520);
 }
 
 nav {
     height: 70px;
-    background-color: #AA8972;
-    opacity: 0.8;
 }
 
 nav ul {
@@ -123,7 +127,7 @@ label #btn2 {
         position: fixed;
         width: 80%;
         height: 100hv;
-        background-color: #AA8972;
+        background-color: ;
         top: 70px;
         left: -100%;
         text-align: center;
@@ -154,7 +158,7 @@ label #btn2 {
     position: absolute;
     left: 4%;
     padding: 5px;
-    box-shadow: 0 30px 30px 0 #AA8972;
+    box-shadow: 0 30px 30px 0 #7b5520;
     border-radius: 8%;
 }
 
@@ -188,13 +192,13 @@ label #btn2 {
 
 #totalSum {
     text-align: center;
-    color: #AA8972;
+    color: #7b5520;
     font-weight: bold;
     font-size: 20px;
 }
 
 .btn {
-    background-color: #AA8972;
+    background-color: #4d351d;
     margin-top: 5px;
     margin-left: 10px;
     border: none;
@@ -209,6 +213,16 @@ label #btn2 {
 }
 
 
+/* #plus {
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+#minus {
+    font-size: 30px;
+    margin-left: 5px;
+} */
+
 .EGP {
     margin-left: 5px;
 }
@@ -216,7 +230,7 @@ label #btn2 {
 .EGPP {
     margin-left: 5px;
     font-size: 16px;
-    color: #8b6e46;
+    color: #4d351d;
 }
 
 .productprice {
@@ -237,7 +251,7 @@ label #btn2 {
 }
 
 .addToUser {
-    color: #8b6e46;
+    color: #4d351d;
     font-size: 28px;
     margin-top: 40px;
     font-weight: bold;
@@ -270,7 +284,7 @@ label #btn2 {
     font-size: 18px;
     margin-left: 53px;
     margin-top: 15px;
-    color: #8b6e46;
+    color: #4d351d;
     font-family: bold;
     font-size: 20px;
     width: 60px;
@@ -288,7 +302,7 @@ label #btn2 {
     font-size: 16px;
     margin-left: 3px;
     margin-top: 15px;
-    color: #8b6e46;
+    color: #4d351d;
     font-family: bold;
     font-size: 20px;
 }
@@ -298,17 +312,7 @@ label #btn2 {
     margin-bottom: 30px;
     margin-left: 28px;
 }
-.lastorder {
-    color: #8b6e46;
-    font-size: 20px;
-    margin-top: 30px;
-    font-weight: bold;
-}
-.btnSearch
-{
-    position:absolute;
-    right:60px;
-}
+
 .productCount {
     margin-left: 30px;
 }
